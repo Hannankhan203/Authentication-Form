@@ -184,7 +184,7 @@ const logoutUser = () => {
 
 onAuthStateChanged(auth, (user) => {
   if (!user) {
-    window.location.replace("../login.html");
+    window.location.replace("../../Login/login.html");
   } else {
     fetchAndRenderNotes();
   }
