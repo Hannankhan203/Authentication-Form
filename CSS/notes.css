@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #08a4bd;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  /* border: 2px solid black; */
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+label {
+  /* border: 2px solid black; */
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+#notes,
+.btn,
+.edit-note {
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  background-color: #01172f;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+#notes:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.notes-list {
+  display: flex;
+  /* border: 2px solid black; */
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.notes {
+  /* border: 2px solid black; */
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-size: 1.2rem;
+  gap: 20px;
+  align-items: center;
+}
+
+.logout-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 0px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  label {
+    /* border: 2px solid black; */
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #notes,
+  .btn,
+  .edit-note {
+    font-size: 0.8rem;
+    padding: 3px 5px;
+  }
+
+  .notes-list {
+    /* border: 2px solid black; */
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .notes {
+    /* border: 2px solid black; */
+    font-size: 0.8rem;
+    gap: 10px;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/notes.css" />
+    <title>Notes App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Notes</h1>
+      <label for="notes"
+        >Enter Notes:
+        <input
+          type="text"
+          name="notes"
+          id="notes"
+          placeholder="Enter Notes Here..."
+        />
+        <button class="add-btn btn">Add</button>
+      </label>
+
+      <div class="notes-list"></div>
+    </div>
+    <button class="logout-btn btn">Logout</button>
+    <script type="module" src="JS/notes.js"></script>
+  </body>
+</html>
