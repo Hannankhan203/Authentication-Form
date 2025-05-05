@@ -2,6 +2,9 @@
 
 A responsive and modern authentication system built using **HTML**, **CSS**, and **JavaScript**, featuring **Sign Up**, **Login**, and **Forgot Password** windows. Integrated with **Firebase Authentication** and **Firebase Realtime Database**, this app securely manages user accounts and stores user-specific notes.
 
+🔗 **Live Demo:** [https://autthentication-form.netlify.app/](https://autthentication-form.netlify.app/)  
+📂 **Repository:** [https://github.com/Hannankhan203/Authentication-Form](https://github.com/Hannankhan203/Authentication-Form.git)
+
 ---
 
 ## ✨ Features
@@ -10,9 +13,9 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 - 🔑 **Secure Login** using Email and Password  
 - 📩 **Password Recovery (Forgot Password)**  
 - 🗒️ **User-Specific Notes Storage** – Notes are saved to Firebase under the logged-in user's account  
-- 🚫 **Private Notes** – Users can only see their own notes (user-specific data access)  
-- 📱 **Responsive Design** – Works on both desktop and mobile  
-- ☁️ **Firebase Authentication & Database Integration**  
+- 🚫 **Private Notes** – Users can only see their own notes  
+- 📱 **Responsive Design** – Fully functional on desktop and mobile devices  
+- ☁️ **Firebase Authentication & Realtime Database Integration**  
 - ⚠️ **Client-side Form Validation** *(Coming Soon)*  
 - ✅ **Email Verification Integration** *(Coming Soon)*  
 - 🎨 **Clean and Minimal UI**
@@ -24,19 +27,19 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 | Frontend               | Backend / Services         |
 | ---------------------- | -------------------------- |
 | HTML5                  | Firebase Authentication    |
-| CSS3 (Custom)          | Firebase Realtime Database |
+| CSS3 (Custom Styling)  | Firebase Realtime Database |
 | JavaScript (Vanilla)   | Firebase Console           |
 
 ---
 
 ## 📌 Project Status
 
-- ✅ Authentication system is fully functional (Sign Up, Login, Forgot Password)
-- ✅ Firebase Database successfully stores user-specific notes
-- ✅ Notes visibility is restricted to logged-in user only
-- ✅ Fully responsive on all screen sizes
-- 🚧 Email Verification feature is **coming soon**
-- 🚧 Client-side form validation is **coming soon**
+- ✅ Authentication system: **Sign Up, Login, and Forgot Password** working  
+- ✅ Firebase stores and retrieves **user-specific notes**  
+- ✅ Notes are private per user  
+- ✅ Fully responsive design  
+- 🚧 Email Verification: **Coming Soon**  
+- 🚧 Client-side Validation: **Coming Soon**
 
 ---
 
@@ -44,4 +47,4 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/Hannankhan203/Authentication-Form.git
