@@ -22,7 +22,7 @@ const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    window.location.href = "../../Notes/notes.html";
+    window.location.href = "/Authentication-Form/notes/notes.html";
   }
 });
 

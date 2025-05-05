@@ -31,7 +31,7 @@ const db = getFirestore(app);
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    window.location.href = "../Notes/notes.html";
+    window.location.href = "/Authentication-Form/notes/notes.html";
   }
 });
 
@@ -50,7 +50,7 @@ const signUpUsers = async (event) => {
   signUpEmail.value === "" ||
   signUpPassword.value === ""
   ) {
-    console.log("Please fill all fields");
+    alert("Please fill all fields");
     return;
   }
 
