@@ -75,8 +75,8 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    width: min-content;
+    height: 35vh;
+    width: 90%;
     padding: 10px;
     border-radius: 4px;
     background-color: azure;
@@ -99,6 +99,10 @@ button:active {
   button {
     padding: 3px 5px;
     font-size: 0.8rem;
+  }
+
+  input {
+    width: 100%;
   }
 
   p {

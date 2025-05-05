@@ -79,8 +79,8 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
-    width: min-content;
+    height: 25vh;
+    width: 90%;
     padding: 10px;
     border-radius: 4px;
     background-color: azure;
@@ -103,6 +103,10 @@ p {
   button {
     padding: 3px 5px;
     font-size: 0.8rem;
+  }
+
+  input {
+    width: 100%;
   }
 
   p {
