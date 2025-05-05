@@ -2,8 +2,8 @@
 
 A responsive and modern authentication system built using **HTML**, **CSS**, and **JavaScript**, featuring **Sign Up**, **Login**, and **Forgot Password** windows. Integrated with **Firebase Authentication** and **Firebase Realtime Database**, this app securely manages user accounts and stores user-specific notes.
 
-🔗 **Live Demo:** [https://autthentication-form.netlify.app/](https://autthentication-form.netlify.app/)  
-📂 **Repository:** [https://github.com/Hannankhan203/Authentication-Form](https://github.com/Hannankhan203/Authentication-Form.git)
+🔗 **Live Demo:** [Netlify](https://autthentication-form.netlify.app/)  
+📂 **Repository:** [GitHub](https://github.com/Hannankhan203/Authentication-Form.git)
 
 ---
 
