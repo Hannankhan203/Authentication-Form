@@ -43,6 +43,7 @@ const loginUsers = (event) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log("Error logging in!", errorMessage);
+      alert("Error logging in!", errorMessage);
     });
 };
 

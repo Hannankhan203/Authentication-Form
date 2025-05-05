@@ -61,6 +61,7 @@ const signUpUsers = async (event) => {
 
     if (!querySnapshot.empty) {
       console.log("User with this email already exists in the database.");
+      alert("User with this email already exists in the database.");
     } else {
       const docRef = await addDoc(usersRef, {
         firstName: firstName.value,
@@ -85,9 +86,11 @@ const signUpUsers = async (event) => {
       })
       .catch((error) => {
         console.log("Sign Up Failed:", error.message);
+        alert("Sign Up Failed:", error);
       });
   } catch (e) {
     console.error("Error during signup:", e);
+    alert("Error during signup:", e);
   }
 };
 
