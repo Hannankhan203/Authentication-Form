@@ -60,7 +60,6 @@ const signUpUsers = async (event) => {
     const querySnapshot = await getDocs(q);
 
     if (!querySnapshot.empty) {
-      console.log("User with this email already exists in the database.");
       alert("User with this email already exists in the database.");
     } else {
       const docRef = await addDoc(usersRef, {
@@ -69,7 +68,6 @@ const signUpUsers = async (event) => {
         email: signUpEmail.value,
         password: signUpPassword.value,
       });
-      console.log("User saved in Firestore with ID:", docRef.id);
     }
 
     createUserWithEmailAndPassword(
@@ -78,7 +76,6 @@ const signUpUsers = async (event) => {
       signUpPassword.value
     )
       .then((userCredential) => {
-        console.log("User Sign Up Successful:", userCredential.user);
         firstName.value = "";
         lastName.value = "";
         signUpEmail.value = "";

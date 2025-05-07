@@ -16,7 +16,7 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 - 🚫 **Private Notes** – Users can only see their own notes  
 - 📱 **Responsive Design** – Fully functional on desktop and mobile devices  
 - ☁️ **Firebase Authentication & Realtime Database Integration**  
-- ⚠️ **Client-side Form Validation** *(Coming Soon)*  
+- ⚠️ **Client-side Form Validation**  
 - ✅ **Email Verification Integration** *(Coming Soon)*  
 - 🎨 **Clean and Minimal UI**
 
@@ -39,7 +39,7 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 - ✅ Notes are private per user  
 - ✅ Fully responsive design  
 - 🚧 Email Verification: **Coming Soon**  
-- 🚧 Client-side Validation: **Coming Soon**
+- ✅ Client-side Validation
 
 ---
 

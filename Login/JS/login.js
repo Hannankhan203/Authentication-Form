@@ -35,14 +35,12 @@ const loginUsers = (event) => {
   signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log("Login Successful!", user);
       loginEmail.value = "";
       loginPassword.value = "";
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("Error logging in!", errorMessage);
       alert("Error logging in!", errorMessage);
     });
 };
