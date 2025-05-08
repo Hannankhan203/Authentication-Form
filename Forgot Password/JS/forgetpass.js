@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
 import {
   getAuth,
-  sendSignInLinkToEmail,
+  sendSignInLinkToEmail
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -23,8 +23,7 @@ const verifyEmail = document.getElementById("verify-email");
 const verifyBtn = document.getElementById("verify-btn");
 
 const actionCodeSettings = {
-  url: "http://localhost:5500/Login/login.html",
-
+url: `http://localhost:5500/Login/login.html?mode=passwordless`,
   handleCodeInApp: true,
   iOS: {
     bundleId: "com.example.ios",
@@ -37,18 +36,26 @@ const actionCodeSettings = {
   // linkDomain: 'custom-domain.com'
 };
 
-const verifyUser = () => {
+const verifyUser = (event) => {
   event.preventDefault();
-  sendSignInLinkToEmail(auth, verifyEmail.value, actionCodeSettings)
+  const email = verifyEmail.value.trim();
+
+  if(!email || !email.includes("@")) {
+    alert("Please provide a valid email address");
+    return;
+  }
+
+  sendSignInLinkToEmail(auth, email, actionCodeSettings)
     .then(() => {
-      window.localStorage.setItem("emailForSignIn", verifyEmail.value);
-      console.log("Verification Link sent to:", verifyEmail.value);
+      window.localStorage.setItem("emailForSignIn", email);
+      alert(`Login link sent to ${email}. Please check your inbox`);
       verifyEmail.value = "";
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("Error sending the Link", errorMessage);
+      console.error("Error sending login link: ", errorMessage)
+      alert(`Error: ${errorMessage}`);
     });
 };
 

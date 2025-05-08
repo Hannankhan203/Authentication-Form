@@ -4,6 +4,8 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  isSignInWithEmailLink,
+  signInWithEmailLink
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -46,3 +48,40 @@ const loginUsers = (event) => {
 };
 
 loginBtn.addEventListener("click", loginUsers);
+
+document.addEventListener("DomContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const mode = urlParams.get('mode');
+
+  if(isSignInWithEmailLink(auth, window.location.href) && (mode === 'passwordless' || mode === signIn)) {
+    handlePasswordlessLogin();
+    return;
+  }
+})
+
+async function handlePasswordlessLogin() {
+  document.querySelector(".container").style.display = "none";
+  document.getElementById("passwordless-login").style.display = "block";
+
+  let email = window.localStorage.getItem("emailForSignIn");
+
+  if(!email) {
+    email = window.prompt("Please provide your email for confirmation");
+    if(!email) {
+      window.location.href = '../login.html';
+      return;
+    }
+  }
+
+  try {
+    await signInWithEmailLink(auth, email, window.location.href);
+    window.localStorage.removeItem("emailForSignIn");
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+
+    window.location.replace("../../Notes/notes.html");
+  } catch(error) {
+    console.error("Password less login fail: ", error.message);
+    alert(`Login failed ${error.message}`);
+  }
+}

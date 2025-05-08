@@ -17,7 +17,7 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 - 📱 **Responsive Design** – Fully functional on desktop and mobile devices  
 - ☁️ **Firebase Authentication & Realtime Database Integration**  
 - ⚠️ **Client-side Form Validation**  
-- ✅ **Email Verification Integration** *(Coming Soon)*  
+- ✅ **Email Verification Integration**  
 - 🎨 **Clean and Minimal UI**
 
 ---
@@ -38,7 +38,7 @@ A responsive and modern authentication system built using **HTML**, **CSS**, and
 - ✅ Firebase stores and retrieves **user-specific notes**  
 - ✅ Notes are private per user  
 - ✅ Fully responsive design  
-- 🚧 Email Verification: **Coming Soon**  
+- ✅ Email Verification 
 - ✅ Client-side Validation
 
 ---
