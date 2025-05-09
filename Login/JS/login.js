@@ -20,7 +20,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth();
+const auth = getAuth(app);
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -43,17 +43,18 @@ const loginUsers = (event) => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert("Error logging in!", errorMessage);
+      // alert("Error logging in!", errorMessage);
+      console.log(errorMessage)
     });
 };
 
 loginBtn.addEventListener("click", loginUsers);
 
-document.addEventListener("DomContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const mode = urlParams.get('mode');
 
-  if(isSignInWithEmailLink(auth, window.location.href) && (mode === 'passwordless' || mode === signIn)) {
+  if(isSignInWithEmailLink(auth, window.location.href) && (mode === 'passwordless' || mode === 'signIn')) {
     handlePasswordlessLogin();
     return;
   }
